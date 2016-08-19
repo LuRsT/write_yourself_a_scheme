@@ -11,12 +11,15 @@ https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours/Parsing
 
 > Haskell is a functional language: instead of giving the computer a sequence of instructions to carry out, you give it a collection of definitions that tell it how to perform every function it might need. These definitions use various compositions of actions and functions. The compiler figures out an execution path that puts everything together.
 
+> Bind (>>) means "Attempt to match the first parser, then attempt to match the second with the remaining input, and fail if either fails."
 
-### How to compile
+### Chapter 1
+
+    ghc -o greet greet.hs
+    ./greet
+
+### Chapter 2
 
     ghc --make -o simple_parser scheme.hs
-
-### How to run
-
     ./simple_parser $
     ./simple_parser a
